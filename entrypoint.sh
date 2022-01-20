@@ -86,13 +86,10 @@ fi
 info "Searching outputs..."
 cnt=0
 videos_path="/manim/media/videos"
-for sce in $scene_names; do
-  echo Searching path of ${sce}
-  video=$(find ${videos_path} -name "${sce}.mp4" -o -name "${sce}.png")
-  echo Found $video
-  output[$cnt]=$video
-  cnt=$cnt+1
-done
+images_path="/manim/media/images"
+readarray -t output_videos < <(find $videos_path -maxdepth 3 -type f)
+readarray -t output_images < <(find $images_path -maxdepth 3 -type f)
+output=(${output_videos[@]} ${output_images[@]})
 
 mkdir /github/workspace/outputs/
 for file in ${output[@]}; do
