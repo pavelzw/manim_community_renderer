@@ -1,4 +1,4 @@
-name: Github Action for manim rendering
+name: ManimCommunity Renderer
 description: GitHub Action to render manim videos using the ManimCommunity version
 author: Pavel Zwerschke
 inputs:
