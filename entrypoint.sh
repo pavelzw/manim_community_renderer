@@ -87,14 +87,16 @@ info "Searching outputs..."
 cnt=0
 videos_path="/manim/media/videos"
 for sce in $scene_names; do
+  echo Searching path of ${sce}
   video=$(find ${videos_path} -name "${sce}.mp4" -o -name "${sce}.png")
+  echo Found $video
   output[$cnt]=$video
   cnt=$cnt+1
 done
 
 mkdir /github/workspace/outputs/
 for file in ${output[@]}; do
-  info Copying $file into "/github/workspace/outputs/"
+  info "Copying $file into /github/workspace/outputs/"
   cp $file "/github/workspace/outputs/"
 done
 
