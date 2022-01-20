@@ -94,6 +94,7 @@ done
 
 mkdir /github/workspace/outputs/
 for file in ${output[@]}; do
+  info Copying $file into "/github/workspace/outputs/"
   cp $file "/github/workspace/outputs/"
 done
 
