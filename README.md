@@ -29,7 +29,7 @@ This Action is based on [manim_action_renderer](https://github.com/manim-kinderg
 
 * `args`
 
-    The arguments passed to the manim command line. Usually controls the resolution of the exported video. The default is `-qp` which is `1440p@60`.
+    The arguments passed to the manim command line. Usually controls the resolution of the exported video. The default is `-qp --progress_bar none` which means render at `1440p@60` without showing the progress bar in the logs.
 
 * `extra_packages`
 

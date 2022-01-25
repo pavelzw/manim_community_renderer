@@ -72,6 +72,7 @@ fi
 
 info "Rendering..."
 for sce in $scene_names; do
+  info "Running manim ${args[@]} ${source_file} ${sce}"
   manim ${args[@]} "$source_file" $sce 
   if [ $? -ne 0 ]; then
     error "manim render error"

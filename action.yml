@@ -12,7 +12,7 @@ inputs:
   args:
     description: Arguments to be passed to manim cli
     required: true
-    default: -qp
+    default: -qp --progress_bar none
   extra_packages:
     description: Install extra python packages by pip
   extra_system_packages:
