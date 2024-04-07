@@ -1,3 +1,11 @@
+# ⚠️ This repository is deprecated
+
+Think about installing texlive on your runner directly (for example using [teatimeguest/setup-texlive-action](https://github.com/teatimeguest/setup-texlive-action))
+and using a package manager like [pixi](https://pixi.sh) to render your projects in CI.
+See [here](https://github.com/pavelzw/7circles/blob/main/.github/workflows/build.yaml) for an example.
+
+---
+
 A GitHub Action that uses manim to render videos
 
 It runs on [the manim community docker image](https://github.com/ManimCommunity/manim/tree/main/docker).
